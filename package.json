@@ -1,0 +1,11 @@
+{
+    "name": "faas",
+    "description": "Complete Fees-as-a-Service examples.",
+    "author": "Frictionless",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@frictionless-money/faas": "^0.0.3",
+        "rpc-bitcoin": "^2.0.0"
+    }
+}
