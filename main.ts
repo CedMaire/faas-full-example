@@ -133,6 +133,10 @@ async function psbt(faas: Faas): Promise<void> {
         console.log("   ", "Retrieving Candidate TX");
         let readPSBT: PSBT = await faas.readPSBT(feeIncludedPSBT.asset, feeIncludedPSBT.id);
 
+        // Sort to ensure equality.
+        feeIncludedPSBT.fee.sort();
+        readPSBT.fee.sort();
+
         console.log("   ", "Testing TX Equality");
         deepStrictEqual(readPSBT, feeIncludedPSBT);
 
